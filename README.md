@@ -9,5 +9,17 @@
 #### Структура репозитория:
 baseline_boosting - решение на основание градиентного бустинга <br/> 
 |-- baseline.ipynb(0.737 AUC ROC Public LB) - ноутбук с решением задачи<br/> 
-|-- features.py - методы для генерации признаков<br/> 
+|-- features.py - методы для генерации признаков<br/>
+
+rnn_baseline - решение на основе рекуррентных нейронных сетей <br/>
+|-- baseline - папка с бейзлайнами (0.750 AUC ROC Public LB) <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;|-- pytorch_baseline.ipynb - решение с использованием torch <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;|-- tf_baseline.ipynb - решение с использованием tensorfow <br/>
+|-- constants - папка с полезными константами для препроцессинга <br/>
+|-- data_generators.py - содержит функционал для генерации батчей <br/>
+|-- dataset_preprocessing_utils.py - методы для препроцессинга транзакционных данных <br/>
+|-- pytorch_training.py - методы обучения, валидации и инференса модели на torch <br/>
+|-- tf_training.py - методы обучения, валидации и инференса модели на tensorflow <br/>
+|-- training_aux.py - реализация early_stopping-а <br/>
+
 utils.py - методы для пакетного чтения и предобработки данных<br/> 
