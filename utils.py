@@ -16,7 +16,7 @@ def read_parquet_dataset_from_local(path_to_dataset: str, start_from: int = 0,
 
     res = []
     dataset_paths = sorted([os.path.join(path_to_dataset, filename) for filename in os.listdir(path_to_dataset) 
-                              if filename.startswith('part')])
+                              if filename.endswith('.pq')])
     
     start_from = max(0, start_from)
     chunks = dataset_paths[start_from: start_from + num_parts_to_read]
